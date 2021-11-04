@@ -1,0 +1,54 @@
+body {
+    background-color: #2B3E50 !important;
+}
+
+.addPostButtonContainer {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+}
+
+.addPostButton {
+    border-radius: 40px;
+}
+
+.form-control:focus {
+    color: #ffffff !important;
+}
+
+.form-control {
+    color: #ffffff !important;
+}
+
+.txtPost {
+    resize: none;
+}
+
+.a_username {
+    cursor: pointer;
+}
+
+
+#showUserProfile {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+}
+
+#closeUserProfile {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+#userProfileContainer {
+    position: absolute;
+    height: 60%;
+    width: 30%;
+    top: 100px;
+    right: 30px;
+}
+
+.hide {
+    display: none;
+}

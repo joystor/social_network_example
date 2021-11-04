@@ -1,0 +1,34 @@
+{% extends "network/layout.html" %}
+
+{% block reactApp %}
+
+<script>
+    window.appOptions = {
+        lastPost: Date.now(),
+        {% if user.is_authenticated %}
+            username: "{{user.username}}",
+            usid:"{{user.id}}",
+            isAuthenticated: true,
+        {% else %}
+            username: "",
+            usid:"-1",
+            isAuthenticated: false,
+        {% endif %}
+        urls:{
+            index: "{% url 'index' %}",
+            login: "{% url 'login' %}",
+            logout: "{% url 'logout' %}",
+            register: "{% url 'register' %}",
+        }
+    };
+</script>
+
+    <div id="appAll"></div>
+    {% include 'network/load_scripts_all.html' %}
+
+    {% if user.is_authenticated %}
+        <div id="appLoginRequired"></div>
+        {% include 'network/load_scripts_login_required.html' %}
+    {% endif %}
+
+{% endblock %}
